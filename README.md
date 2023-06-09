@@ -57,7 +57,7 @@ To query the Kafka topic, you have to config the below items in the query editor
 
 - The plugin currently does not support any authorization and authentication method.
 - The plugin currently does not support TLS.
-- Plugin is based on [confluent-kafka-go](https://github.com/confluentinc/confluent-kafka-go), hence it only supports Linux-based operating systems as discussed in [#6](https://github.com/hoptical/grafana-kafka-datasource/issues/6). However, we're cosidering changing the base package to support all operating systems.
+- Plugin is based on [confluent-kafka-go](https://github.com/confluentinc/confluent-kafka-go), hence it only supports Linux-based operating systems (not available on arm64 known as Apple Silicon) as discussed in [#6](https://github.com/hoptical/grafana-kafka-datasource/issues/6). However, we're cosidering changing the base package to support all operating systems.
 
 This plugin supports topics publishing very simple JSON formatted messages. Note that only the following structure is supported as of now:
 
