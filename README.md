@@ -130,6 +130,41 @@ A data source backend plugin consists of both frontend and backend components.
    mage build:backend
    ```
 
+## Running locally in dev mode
+
+### Install dependencies
+
+   ```bash
+   yarn install
+   ```
+
+### Run frontend  
+In a new terminal tab:
+   ```bash
+   yarn run dev
+   ```
+
+### Build backend
+
+1. If you are using Linux:
+   ```bash
+   mage -v build:backend
+   ```
+
+2. If you are using Mac:  
+Install dependencies as described [in this guide](https://stackoverflow.com/a/77295702)
+   ```bash
+   CGO_ENABLED=1 GOOS=linux GOARCH=amd64 CC=x86_64-unknown-linux-gnu-gcc go build -o dist/gpx_kafka-datasource_linux_amd64 ./pkg/main.go
+   ```
+
+### Run Grafana in docker (with plugin installed)
+
+   ```bash
+   yarn run server
+   ```
+
+Grafana will be available on `localhost:3000` with plugin already installed.
+
 ## Contributing
 
 Thank you for considering contributing! If you find an issue or have a better way to do something, feel free to open an issue or a PR.
